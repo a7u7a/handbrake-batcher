@@ -1,17 +1,19 @@
 # Handbrake Batch processing
 
-- Used for optimizing static assets for web.
-- Supports presets. Tune your preset using the Handbrake GUI. Then pass the path to the preset file to this script.
-- Check the example script `process_files.example.sh` for usage.
-- To-do: Multiple threads.
+- Python script to batch process videos using [HandbrakeCLI](https://handbrake.fr/docs/en/latest/cli/cli-options.html). Used for optimizing and standardizing static assets for web. Ensures consistent output format and quality across assets.
+- Usage examples in `process_files.example.sh`.
+- Supports presets. Tune your preset using the Handbrake GUI. Then pass the preset file path to this script.
+- Tested in macOS.
+- To-do:
+  - Multiple threads
 
-## Install Handbrake
+## Install HandbrakeCLI
 
 ```bash
 brew install handbrake
 ```
 
-## Locate Handbrake presets
+## Path to Handbrake user presets
 
 ```bash
 cd ~/Library/Containers/fr.handbrake.HandBrake/Data/Library/Application\ Support/HandBrake/UserPresets.json
