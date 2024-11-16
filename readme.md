@@ -1,7 +1,9 @@
 # Handbrake Batch processing
 
-- Used for batch processing videos with Handbrake. Used for optimizing static assets.
+- Used for optimizing static assets for web.
+- Supports presets.Tune your preset using the Handbrake GUI. Then pass the path to the preset file to this script.
 - Check the example script `process_files.example.sh` for usage.
+- To-do: Multiple threads.
 
 ## Install Handbrake
 
