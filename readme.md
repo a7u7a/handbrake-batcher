@@ -1,16 +1,7 @@
 # Handbrake Batch processing
 
-Used for batch processing videos with Handbrake. Used for optimizing static assets.
-
-Example usage:
-
-```bash
-chmod +x process_files.sh
-```
-
-```bash
-python handbrake_batch.py /path/to/input/videos /path/to/output/directory --preset /path/to/your/preset.json
-```
+- Used for batch processing videos with Handbrake. Used for optimizing static assets.
+- Check the example script `process_files.example.sh` for usage.
 
 ## Install Handbrake
 

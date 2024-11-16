@@ -10,7 +10,7 @@ def process_video(input_file, output_dir, preset, preset_name=None, output_name=
     if output_name and index is not None:
         output_filename = f"{output_name}_{index}{input_path.suffix}"
     else:
-        output_filename = f"{input_path.stem.replace(' ', '_')}_converted{input_path.suffix}"
+        output_filename = f"{input_path.stem.replace(' ', '_')}_handbrake_optimized{input_path.suffix}"
     
     output_path = Path(output_dir) / output_filename
     
