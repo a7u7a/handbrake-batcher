@@ -7,11 +7,9 @@ def process_video(input_file, output_dir, preset, preset_name=None, output_name=
     """Process a single video file using HandBrakeCLI."""
     input_path = Path(input_file)
     
-    # Generate output filename based on arguments
     if output_name and index is not None:
         output_filename = f"{output_name}_{index}{input_path.suffix}"
     else:
-        # Replace spaces with underscores in the original filename
         output_filename = f"{input_path.stem.replace(' ', '_')}_converted{input_path.suffix}"
     
     output_path = Path(output_dir) / output_filename
@@ -22,7 +20,7 @@ def process_video(input_file, output_dir, preset, preset_name=None, output_name=
         "HandBrakeCLI",
         "-i", str(input_path),
         "-o", str(output_path),
-        "--preset-import-file", preset,  # Path to the preset file
+        "--preset-import-file", preset,
         "-Z", preset_name
     ]
     
@@ -47,9 +45,8 @@ def main():
                         help="Number of concurrent processes")
     args = parser.parse_args()
 
-    # Create output directory if it doesn't exist
     os.makedirs(args.output_dir, exist_ok=True)
-    # Get list of video files
+    
     video_extensions = ('.mp4', '.mov', '.avi', '.mkv', '.m4v')
     input_files = [
         f for f in Path(args.input_dir).glob("**/*")
