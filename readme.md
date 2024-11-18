@@ -16,7 +16,7 @@
 brew install handbrake
 ```
 
-## Path to Handbrake user presets
+## Useful: Path to Handbrake user presets
 
 ```bash
 ~/Library/Containers/fr.handbrake.HandBrake/Data/Library/Application\ Support/HandBrake/UserPresets.json
